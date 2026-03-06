@@ -1,17 +1,17 @@
 <div class="wrap">
   <div class="card">
-    <h1>ฝึกพยัญชนะไทย (Thai Consonant Drill)</h1>
-    <p class="sub">เลือก “ชื่อ” ของพยัญชนะที่แสดง (ผิดได้ 3 ครั้ง = 3 หัวใจ)</p>
+    <h1>Thai Consonant Drill</h1>
+    <p class="sub">Please enter your name before starting the quiz.</p>
 
-    <!-- Start screen -->
-    <div id="startScreen" class="start-screen">
+    <!-- Screen 1: Name input only -->
+    <div id="nameScreen">
       <div class="start-box">
-        <label for="nicknameInput" class="label">Please enter your nickname before starting the quiz</label>
+        <label for="nicknameInput" class="label">Enter your name</label>
         <input
           id="nicknameInput"
           class="input"
           type="text"
-          placeholder="Enter your nickname"
+          placeholder="Your name"
           maxlength="30"
         />
         <button id="startBtn" class="btn primary" type="button">Start Quiz</button>
@@ -19,12 +19,12 @@
       </div>
     </div>
 
-    <!-- Quiz screen -->
+    <!-- Screen 2: Quiz -->
     <div id="quizScreen" class="hidden">
       <div class="topbar">
         <div class="pill">
           <span>👤 Player:</span>
-          <strong id="playerInfo">-</strong>
+          <strong id="playerInfo"></strong>
         </div>
         <div class="pill">
           <span>❤️ Lives:</span>
@@ -42,7 +42,7 @@
 
         <div class="grid" id="choices"></div>
 
-        <div class="feedback" id="feedback">Enter your nickname first to begin</div>
+        <div class="feedback" id="feedback">Choose the correct answer.</div>
 
         <div class="actions">
           <button class="btn primary" id="nextBtn" type="button" disabled>Next</button>
